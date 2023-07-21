@@ -7,7 +7,9 @@
 [**Marco Bertini**](https://scholar.google.com/citations?user=SBm9ZpYAAAAJ&hl=en),
 [**Rita Cucchiara**](https://scholar.google.com/citations?hl=en&user=OM3sZEoAAAAJ)
 
-This is the **official repository** for the [**paper**](https://iris.unimore.it/retrieve/2e539813-e1e2-49a3-825f-961ee9c6bde5/2023-iciap-fashion.pdf) "*OpenFashionCLIP: Vision-and-Language Contrastive Learning with Open-Source Fashion Data*".
+This is the **official repository** for the paper [**OpenFashionCLIP: Vision-and-Language Contrastive Learning with Open-Source Fashion Data**](https://iris.unimore.it/retrieve/2e539813-e1e2-49a3-825f-961ee9c6bde5/2023-iciap-fashion.pdf), ICIAP 2023.
+## 🔥 News 🔥
+- **`1 July 2023`** Our work has been accepted for publication to [ICIAP 2023](https://iciap2023.org/) 🎉 🎉 !!!
 
 ## Overview
 
@@ -23,8 +25,8 @@ This is the **official repository** for the [**paper**](https://iris.unimore.it/
 If you make use of our work, please cite our paper:
 
 ```bibtex
-@inproceedings{baldrati2023multimodal,
-  title={Multimodal Garment Designer: Human-Centric Latent Diffusion Models for Fashion Image Editing},
+@inproceedings{cartella2023open,
+  title={OpenFashionCLIP: Vision-and-Language Contrastive Learning with Open-Source Fashion Data},
   author={Cartella, Giuseppe and Baldrati, Alberto and Morelli, Davide and Cornia, Marcella and Bertini, Marco and Cucchiara, Rita},
   booktitle={Proceedings of the International Conference on Image Analysis and Processing},
   year={2023}
