@@ -11,7 +11,7 @@ This is the **official repository** for the paper [**OpenFashionCLIP: Vision-and
 ## 🔥 News 🔥
 - **`1 July 2023`** Our work has been accepted for publication to [ICIAP 2023](https://iciap2023.org/) 🎉 🎉 !!!
 
-## Overview
+## ✨ Overview
 
 <p align="center">
     <img src="images/model.jpg" style="max-width:500px">
