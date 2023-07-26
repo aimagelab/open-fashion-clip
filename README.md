@@ -1,5 +1,8 @@
 # OpenFashionCLIP (ICIAP 2023)
 ### Vision-and-Language Contrastive Learning with Open-Source Fashion Data
+
+<a href="https://pytorch.org/get-started/locally/"><img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-ee4c2c?logo=pytorch&logoColor=white"></a>
+
 [**Giuseppe Cartella**](https://scholar.google.com/citations?hl=en&user=0sJ4VCcAAAAJ),
 [**Alberto Baldrati**](https://scholar.google.com/citations?hl=en&user=I1jaZecAAAAJ),
 [**Davide Morelli**](https://scholar.google.com/citations?user=UJ4D3rYAAAAJ&hl=en),
