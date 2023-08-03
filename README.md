@@ -29,7 +29,7 @@ If you make use of our work, please cite our paper:
 
 ```bibtex
 @inproceedings{cartella2023open,
-  title={OpenFashionCLIP: Vision-and-Language Contrastive Learning with Open-Source Fashion Data},
+  title={{OpenFashionCLIP: Vision-and-Language Contrastive Learning with Open-Source Fashion Data}},
   author={Cartella, Giuseppe and Baldrati, Alberto and Morelli, Davide and Cornia, Marcella and Bertini, Marco and Cucchiara, Rita},
   booktitle={Proceedings of the International Conference on Image Analysis and Processing},
   year={2023}
