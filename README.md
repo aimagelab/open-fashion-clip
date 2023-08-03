@@ -37,7 +37,7 @@ If you make use of our work, please cite our paper:
 ```
 
 ## TODO
-Source code and trained models will be release soon.
+Source code and trained models will be released soon.
 
 ## Acknowledgements
 This work has partially been supported by the European Commission under the PNRR-M4C2 (PE00000013) project "FAIR - Future Artificial Intelligence Research" and the European Horizon 2020 Programme (grant number 101004545 - ReInHerit), and by the PRIN project "CREATIVE: CRoss-modal understanding and gEnerATIon of Visual and tExtual content" (CUP B87G22000460001), co-funded by the Italian Ministry of University.
