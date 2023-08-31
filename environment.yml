@@ -1,0 +1,40 @@
+name: ofclip
+channels:
+  - defaults
+dependencies:
+  - _libgcc_mutex=0.1
+  - _openmp_mutex=5.1
+  - ca-certificates=2023.05.30
+  - ld_impl_linux-64=2.38
+  - libffi=3.4.4
+  - libgcc-ng=11.2.0
+  - libgomp=11.2.0
+  - libstdcxx-ng=11.2.0
+  - ncurses=6.4
+  - openssl=3.0.10
+  - pip=23.2.1
+  - python=3.9.17
+  - readline=8.2
+  - setuptools=68.0.0
+  - sqlite=3.41.2
+  - tk=8.6.12
+  - tzdata=2023c
+  - wheel=0.38.4
+  - xz=5.4.2
+  - zlib=1.2.13
+  - pip:
+    - certifi==2023.7.22
+    - charset-normalizer==3.2.0
+    - filelock==3.12.3
+    - fsspec==2023.6.0
+    - idna==3.4
+    - open-clip-torch==2.20.0
+    - packaging==23.1
+    - pillow==10.0.0
+    - protobuf==3.20.3
+    - pyyaml==6.0.1
+    - regex==2023.8.8
+    - requests==2.31.0
+    - sentencepiece==0.1.99
+    - tqdm==4.66.1
+    - wcwidth==0.2.6
