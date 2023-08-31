@@ -12,6 +12,7 @@
 
 This is the **official repository** for the paper [**OpenFashionCLIP: Vision-and-Language Contrastive Learning with Open-Source Fashion Data**](https://iris.unimore.it/retrieve/2e539813-e1e2-49a3-825f-961ee9c6bde5/2023-iciap-fashion.pdf), ICIAP 2023.
 ## 🔥 News 🔥
+- **`30 August 2023`** Release of the inference code and checkpoint!
 - **`1 July 2023`** Our work has been accepted for publication to [ICIAP 2023](https://iciap2023.org/) 🎉 🎉 !!!
 
 ## ✨ Overview
@@ -23,6 +24,57 @@ This is the **official repository** for the paper [**OpenFashionCLIP: Vision-and
 >**Abstract**: <br>
 > The inexorable growth of online shopping and e-commerce demands scalable and robust machine learning-based solutions to accommodate customer requirements. In the context of automatic tagging classification and multimodal retrieval, prior works either defined a low generalizable supervised learning approach or more reusable CLIP-based techniques while, however, training on closed source data. In this work, we propose OpenFashionCLIP, a vision-and-language contrastive learning method that only adopts open-source fashion data stemming from diverse domains, and characterized by varying degrees of specificity. Our approach is extensively validated across several tasks and benchmarks, and experimental results highlight a significant out-of-domain generalization capability and consistent improvements over state-of-the-art methods both in terms of accuracy and recall.
 
+## Environment Setup
+Clone the repository and create the `ofclip` conda environment using the `environment.yml` file:
+
+```
+conda env create -f environment.yml
+conda activate ofclip
+```
+
+## Getting Started
+Download the weights of OpenFashionCLIP at [this link](https://ailb-web.ing.unimore.it/publicfiles/OpenFashionCLIP/finetuned_clip.pt).
+
+ OpenFashionCLIP can be used in just a few lines to compute the cosine similarity between a given image and a textual prompt:
+
+```
+import open_clip
+from PIL import Image
+import torch
+
+device = 'cuda' if torch.cuda.is_available() else 'cpu'
+
+# Load the model
+clip_model, _, preprocess = open_clip.create_model_and_transforms('ViT-B/32')
+state_dict = torch.load('weights/openfashionclip.pt', map_location=device)
+clip_model.load_state_dict(state_dict['CLIP'])
+clip_model = clip_model.eval().requires_grad_(False).to(device)
+tokenizer = open_clip.get_tokenizer('ViT-B-32')
+
+#Load the image
+img = Image.open('examples/maxi_dress.jpg')
+img = preprocess(img).to(device)
+
+prompt = "a photo of a"
+text_inputs = ["blue cowl neck maxi-dress", "red t-shirt", "white shirt"]
+text_inputs = [prompt + " " + t for t in text_inputs]
+
+tokenized_prompt = tokenizer(text_inputs).to(device)
+
+with torch.no_grad():
+    image_features = clip_model.encode_image(img.unsqueeze(0)) #Input tensor should have shape (b,c,h,w)
+    text_features = clip_model.encode_text(tokenized_prompt)
+    image_features /= image_features.norm(dim=-1, keepdim=True)
+    text_features /= text_features.norm(dim=-1, keepdim=True)
+
+    text_probs = (100.0 * image_features @ text_features.T).softmax(dim=-1)
+
+print("Labels probs:", text_probs)
+```
+
+
+## TODO
+- [x] Inference code and checkpoint.
 
 ## Citation
 If you make use of our work, please cite our paper:
@@ -36,8 +88,6 @@ If you make use of our work, please cite our paper:
 }
 ```
 
-## TODO
-Source code and trained models will be released soon.
 
 ## Acknowledgements
 This work has partially been supported by the European Commission under the PNRR-M4C2 (PE00000013) project "FAIR - Future Artificial Intelligence Research" and the European Horizon 2020 Programme (grant number 101004545 - ReInHerit), and by the PRIN project "CREATIVE: CRoss-modal understanding and gEnerATIon of Visual and tExtual content" (CUP B87G22000460001), co-funded by the Italian Ministry of University.
