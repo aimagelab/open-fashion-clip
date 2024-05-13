@@ -33,7 +33,7 @@ conda activate ofclip
 ```
 
 ## Getting Started
-Download the weights of OpenFashionCLIP at [this link](https://ailb-web.ing.unimore.it/publicfiles/OpenFashionCLIP/finetuned_clip.pt).
+Download the weights of OpenFashionCLIP at [this link](https://github.com/aimagelab/open-fashion-clip/releases/download/open-fashion-clip/finetuned_clip.pt).
 
  OpenFashionCLIP can be used in just a few lines to compute the cosine similarity between a given image and a textual prompt:
 
